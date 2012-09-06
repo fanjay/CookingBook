@@ -1,0 +1,77 @@
+Format:
+
+    可以透過底下規則來建立 JSON 字串
+
+1. JSON 字串可以包含陣列 Array 資料或者是物件 Object 資料
+2. 陣列可以用 [ ] 來寫入資料
+3. 物件可以用 { } 來寫入資料
+4. name / value 是成對的，中間透過 (:) 來區隔
+
+物件或陣列的 value 值可以如下:
+
+1. 數字 (整數或浮點數)
+2. 字串 (請用 “” 括號)
+3. 布林函數 (boolean) (true 或 false)
+4. 陣列 (請用 [ ] )
+5. 物件 (請用 { } )
+6. NULL
+
+EX:
+
+//This is an Object
+var obj= {
+    "orderID": 12345,
+    "contents": 
+
+      [
+         {  "productID": 34, "productName": "SuperWidget",  "quantity": 1  },
+         {  "productID": 56, "productName": "WonderWidget",  "quantity": 3 }
+      ]
+  
+} 
+
+//This is Json file
+
+var json= '                         
+{                                           
+    "shopperName": "John Smith",              
+   "contents": 
+
+    [                             
+       {    "productID": 34, "productName": "SuperWidget",   "quantity": 1},                                     
+    ],                                        
+    
+    } '  ;
+
+ 
+
+call Json info有幾種方式
+
+1.
+
+alert ( JSON.stringify( obj) ); 
+
+2.
+
+var cart = JSON.parse ( json);
+alert ( cart.shopperEmail );
+alert ( cart.contents[1].productName );
+
+
+
+ 
+
+//But in diff condition:
+
+//There are some diff between JSON and Obj
+
+伺服端可以傳回JSON字串，可以使用eval()將JSON字串計值（evaluate）為JavaScript物件。例如：
+
+var obj = eval(json);
+
+然而eval()也會運算傳入的JavaScript程式碼，因此並不建議直接用eval()，如果只是要計值JSON為JavaScript物件，可以使用JSON.parse()。例如：
+
+var obj = JSON.parse(json);
+
+
+
