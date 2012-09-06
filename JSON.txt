@@ -73,23 +73,3 @@ var obj = eval(json);
 
 var obj = JSON.parse(json);
 
-
-AJAX: object
-
-
-$.ajax({
-
-type: "GET",
-url: "test_check.txt",
-async: false,
-cache: false,
-dataType: "json",
-success: function (rdata) {
-
-$res = rdata.($);
-$.each($res, function (key, value) 
-
- { $("#tbody_space").append(value.$.Cata); }
-
-)};
-});
