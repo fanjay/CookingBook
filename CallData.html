@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+
+</body>
+    <script type="text/javascript">
+//GET
+
+    $.get("URL",{},
+       function(data,statusText)
+       {    
+           var jsonvars=data.mydata;
+             for(var i=0;i<jsonvars.length;i++) 
+                $("#add").append( jsonvars[i].Catagory)
+       })
+	
+
+//AJAX
+
+    $.ajax
+    ({
+        url: "URL",
+        type: "GET",
+        dataType: "json",
+        success: function (data) 
+        {
+            var jsonvars = data.mydata;
+            $.each(jsonvars, function (key, value) 
+            {
+                if (value.Cata1 == st01 && value.Cata2 == st03) {
+                    $("#add").append( jsonvars[i].Catagory)
+                }
+            })
+        }
+     })
+
+//JSrender
+     $.get("GetDb2",{},function(data)
+	 {    
+	    var jsonvars=data.mydata;
+	   $("#add").html($("#tem").render(jsonvars)	  );
+   })
+    
+     </script>
+    <script id="tem" type="text/x-jsrender" data-jsv-tmpl="_0">
+	{{if CataName== "EX1"}}
+		{{:CataName}} 
+        {{>CataName}}
+	{{/if}}
+	</script>
+</html>

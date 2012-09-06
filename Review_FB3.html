@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+</head>
+<body>
+    <input  type="text" id="hidden" style="display: none" />
+    <input  id="hidden1" style="visibility:hidden" />
+    
+    <a id="ex1">Show</a>
+    <button id="create"></button>
+    
+    <select id="select1">
+        <option> a</option>
+        <option> b</option>
+    </select>
+   
+     <input  type="radio" name="account" value="" />
+
+</body>
+    <script type="text/javascript">
+        
+        //Regular
+             //print info
+                       $('#hidden').html(info);
+            //set attr
+                       $('#img').attr('src', "www.google.com");
+                       $('#hidden').attr({ value: '' });
+            //Put num on add or they will stay on String type
+                    var year = parseInt(1911) + parseInt($('#inp_PnYear').val());
+
+
+
+
+
+        //Radio
+            //Set Checked on first 
+            $("input[name='account']:eq(0)").attr('checked', 'checked');
+            //which one had been selected
+            $(":radio").index($(":radio:checked")) //output number
+            getLoad[$(":radio").index($(":radio:checked"))].email //output value ,getLoad(JSON)
+
+        //Select
+            //Select index BY id
+            document.getElementById('select1').selectedIndex;
+            //Set default
+            document.getElementById("select1").selectedIndex = 0;
+            //Clean Record
+            $("#select1 option").detach();
+
+        //Hide
+            //open or hide area
+            $("#create").click(function () {
+                $("#hidden").css("display", "block");
+                // $("#hidden").css("display", "none"); 
+            });
+            //or  block the space
+           $("#create").click(function () {
+               document.getElementById("hidden1").style.visibility = "visible";
+           });
+
+         
+
+         
+
+    </script>
+
+
