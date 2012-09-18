@@ -1,5 +1,6 @@
 ﻿//**MODEL
-        function initInput() {
+       //1.
+       function initInput() {
             this.tokenID = "";
             this.ip = "";
 
@@ -7,7 +8,17 @@
                 return JSON.stringify(this);
             };
         }
+        //2.
+        function initInput() { };
+        initInput.prototype = {
+                tokenID: '',
+                ip: '',
+        initInput.prototype.callu = function () {
+            return JSON.stringify(this.app);
+            };
+        }
 
+        
         function settingOutput() {
             this.tokenID = getinitRe.tokenID;
             this.ip = "";
@@ -143,3 +154,19 @@
             $("#SELECTED option").detach();
             var selectData02 = GetSelectChBank(getCode);
         }
+        
+        
+        //jquery.function ex:$("#item").changeCssColorBack()
+        jQuery.fn.changeCssColorBack = function () {
+            this.removeClass('wMsg');
+        };
+        
+        //jquery ex: String.isValidRegex(success,fail)
+        String.prototype.isValidTaiwanPhone = function (successFunc, failFunc) {
+        /// <summary>是否合格的台灣電話；successFunc為呼叫成功的函式,failFunc為失敗時呼叫函式</summary>
+        /// <returns type="Boolean">是/否</returns>
+        var mobilePattern = /^[0][1-9]{1,2}-([0-9]{7,8})+((#([0-9]){1,5}){0,1})$/;
+        if(true)
+                return false;
+        }
+
