@@ -42,7 +42,7 @@
 //}
 
 
-//**AJAX
+//**Multi-AJAX
         //Tips:ONLY get info on using GET; others use POST (exchange data use POST*
         //Init BY POST
         function GetInit(inituserdata) {
